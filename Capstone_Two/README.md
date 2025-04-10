@@ -12,7 +12,7 @@ The Kaggle dataset [Housing Prices Competition for Kaggle Learn Users](https://w
 describing nearly every aspect of residential homes along with the target variable SalePrice, while the testing set contains 78 explanatory variables—identical in structure except for the absence of the SalePrice column.
 
 # 2. Data Cleaning
-[Data Cleaning Report]()
+[Data Cleaning Report](https://github.com/Sheng214/Springboard_MyProjects/blob/main/Capstone_Two/Capstone%20Two_Data%20Wrangling.ipynb)
 
 * **Missing value cleaning** 
   -	Features with more than 50% missing values--PoolQC, Alley, MiscFeature, Fence, MasVnrType, and FireplaceQu--were removed from both the training and testing datasets.
@@ -32,7 +32,7 @@ describing nearly every aspect of residential homes along with the target variab
   Among the 34 categorical features, 10 with a clear ordinal relationship were converted using ordinal encoding, while CentralAir, a binary feature, was encoded as 0/1. The remaining categorical featues were transformed using one-hot encoding. As a result, training dataset contains 1,338 records and 151 features, while the testing dataset includes 1,459 records and 150 features.
 
 # 3. EDA
-[EDA Report]()
+[EDA Report](https://github.com/Sheng214/Springboard_MyProjects/blob/main/Capstone_Two/Capstone%20Two_EDA.ipynb)
 
 * **SalePrice distribution**
 
@@ -58,7 +58,7 @@ describing nearly every aspect of residential homes along with the target variab
 
 
 # 4. Feature engineering
-[Feature engineering Report]()
+[Feature engineering Report](https://github.com/Sheng214/Springboard_MyProjects/blob/main/Capstone_Two/Capstone%20Two_Pre-processing%20and%20Training%20Data%20Development.ipynb)
 
 All continuous and multi-level features were automatically assigned to appropriate scalers using a custom function. This function categorized features based on statistical thresholds and predefined ordinal classifications. The resulting feature groupings are summarized below:
 
@@ -67,7 +67,7 @@ All continuous and multi-level features were automatically assigned to appropria
 After inspecting the distribution of each feature, the automatic classification appeared reasonable. Subsequently, each feature was scaled using the method assigned to its respective group.
 
 # 5. Machine Learning
-[Feature engineering Report]()
+[Feature engineering Report](https://github.com/Sheng214/Springboard_MyProjects/blob/main/Capstone_Two/Capstone%20Two_Modeling.ipynb)
 
 To predict SalePrice, I implemented models from three major categories: Linear Models, Random Forest, and Light Gradient Boosting Machine (LightGBM). Within each category, multiple model variants were developed using a combination of different modeling techniques, hyperparameter optimization strategies (including Grid Search, Randomized Search, and Bayesian Optimization), cross-validation schemes, and training data configurations (scaled vs. unscaled). This process resulted in a total of 12 distinct model variants.
 
@@ -196,12 +196,6 @@ OverallQual shows a strong, stepwise positive relationship with predicted price.
   *	Smaller homes benefit disproportionately from recent construction.
   *	High GrLivArea amplifies the effect of quality, while high OverallQual amplifies the effect of ExterQual and garage size. 
   *	The SHAP interaction patterns reveal that contextual value (e.g., new + small) often matters more than individual features alone.
-
-
-
-
-
-
 
 
 # 9. Credits
